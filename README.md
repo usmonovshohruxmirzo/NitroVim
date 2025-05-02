@@ -1,0 +1,3 @@
+# NITROVIM
+
+Nvim from scratch
