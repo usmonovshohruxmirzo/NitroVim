@@ -11,5 +11,10 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { "nvim-tree/nvim-tree.lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "navarasu/onedark.nvim" },
-  { "folke/tokyonight.nvim" }
+  { "folke/tokyonight.nvim" },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 })
