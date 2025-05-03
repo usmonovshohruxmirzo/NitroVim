@@ -5,4 +5,3 @@ require("onedark").setup {
 require("onedark").load()
 
 vim.cmd.colorscheme("onedark")
-vim.cmd.colorscheme("tokyonight")
