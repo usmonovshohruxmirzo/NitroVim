@@ -7,3 +7,4 @@ vim.opt.termguicolors = true
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
+vim.opt.fillchars:append({ eob = " " })
