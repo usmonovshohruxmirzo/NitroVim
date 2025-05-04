@@ -37,5 +37,18 @@ require("lazy").setup({
   "neovim/nvim-lspconfig",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim"
-  }
+  },
+  {
+  "hrsh7th/nvim-cmp",             -- Autocompletion plugin
+  "hrsh7th/cmp-nvim-lsp",         -- LSP source for nvim-cmp
+  "hrsh7th/cmp-buffer",           -- Buffer completion
+  "hrsh7th/cmp-path",             -- Path completion
+  "hrsh7th/cmp-cmdline",          -- Command line completion
+  "saadparwaiz1/cmp_luasnip",     -- Snippets completion (optional)
+  "L3MON4D3/LuaSnip",             -- Snippet engine (optional)
+  "williamboman/mason.nvim",      -- Tool for managing LSP servers
+  "williamboman/mason-lspconfig.nvim", -- Integration with LSP config
+  "neovim/nvim-lspconfig"         -- LSP client setup
+},
+{ "rafamadriz/friendly-snippets" },
 })
