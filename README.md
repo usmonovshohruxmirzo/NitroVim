@@ -1,7 +1,5 @@
 # NITROVIM
 
-Let's build neovim from **scratch**
-
 ---
 
 ![image](https://github.com/user-attachments/assets/a6e0dcf7-fbf1-4496-aa72-603f6c7e6b98)
