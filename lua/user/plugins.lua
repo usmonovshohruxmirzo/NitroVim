@@ -51,4 +51,5 @@ require("lazy").setup({
   "neovim/nvim-lspconfig"         -- LSP client setup
 },
 { "rafamadriz/friendly-snippets" },
+{'akinsho/toggleterm.nvim', version = "*", config = true}
 })
