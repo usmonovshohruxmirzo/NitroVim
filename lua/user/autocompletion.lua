@@ -4,9 +4,10 @@ local function has_plugin(name)
 end
 
 local function setup_completion()
-  if not has_plugin('cmp') then
-    print('nvim-cmp not found. Please install it with your package manager.')
-    return
+  if has_plugin('luasnip.loaders.from_vscode') then
+    require('luasnip.loaders.from_vscode').lazy_load({
+      paths = { vim.fn.stdpath("data") .. "/lazy/friendly-snippets" }
+    })
   end
 
   local cmp = require('cmp')
@@ -62,7 +63,6 @@ local function setup_completion()
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
-      -- Accept currently selected item
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
       
       ['<Tab>'] = cmp.mapping(function(fallback)
