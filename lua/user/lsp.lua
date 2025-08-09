@@ -7,18 +7,16 @@ require("mason-lspconfig").setup({
     "html",
     "cssls",
     "tailwindcss",
-    "emmet_ls",
+    "emmet_language_server",
     "jsonls",
-    "prismals",
-    "volar",
   },
+  automatic_enable = false
 })
-
 
 local lspconfig = require("lspconfig")
 
 local on_attach = function(client, bufnr)
-  local opts = { noremap=true, silent=true }
+  local opts = { noremap = true, silent = true }
   local map = vim.api.nvim_buf_set_keymap
 
   map(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -27,33 +25,20 @@ local on_attach = function(client, bufnr)
   map(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 end
 
-lspconfig.tsserver.setup({
-  on_attach = on_attach,
-})
+local servers = {
+  "ts_ls",
+  "eslint",
+  "html",
+  "cssls",
+  "tailwindcss",
+  "emmet_language_server",
+  "jsonls",
+  "prisma_language_server",
+  "volar",
+}
 
-lspconfig.eslint.setup({
-  on_attach = on_attach,
-})
-
-lspconfig.html.setup({
-  on_attach = on_attach,
-})
-
-lspconfig.cssls.setup({
-  on_attach = on_attach,
-})
-
-lspconfig.tailwindcss.setup({
-  on_attach = on_attach,
-})
-
-lspconfig.emmet_ls.setup({
-  filetypes = {
-    "html", "css", "scss", "sass",
-    "javascript", "javascriptreact",
-    "typescript", "typescriptreact",
-  },
-})
-lspconfig.jsonls.setup({
-  on_attach = on_attach,
-})
+for _, server in ipairs(servers) do
+  lspconfig[server].setup({
+    on_attach = on_attach,
+  })
+end
