@@ -32,9 +32,7 @@ local servers = {
   "cssls",
   "tailwindcss",
   "emmet_language_server",
-  "jsonls",
-  "prisma_language_server",
-  "volar",
+  "jsonls"
 }
 
 for _, server in ipairs(servers) do
