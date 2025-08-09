@@ -9,6 +9,7 @@ require("mason-lspconfig").setup({
     "tailwindcss",
     "emmet_language_server",
     "jsonls",
+    "pyright",
   },
   automatic_enable = false
 })
@@ -32,7 +33,8 @@ local servers = {
   "cssls",
   "tailwindcss",
   "emmet_language_server",
-  "jsonls"
+  "jsonls",
+  "pyright",
 }
 
 for _, server in ipairs(servers) do
