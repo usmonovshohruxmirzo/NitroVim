@@ -104,5 +104,12 @@ require("lazy").setup({
       debounce_delay = 135,
     }
     end,
+  },
+
+  -- TODO COMMENTS
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
   }
 })
