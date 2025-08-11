@@ -6,6 +6,7 @@ require("nvim-treesitter.configs").setup({
     "html",
     "css",
     "json",
+    "c_sharp"
   },
   highlight = { enable = true },
 })

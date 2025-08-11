@@ -10,6 +10,10 @@ require("mason-lspconfig").setup({
     "emmet_language_server",
     "jsonls",
     "pyright",
+    "c_sharp",
+    "csharp-language-server",
+    "csharpier",
+    "csharp_ls"
   },
   automatic_enable = false
 })
@@ -35,6 +39,7 @@ local servers = {
   "emmet_language_server",
   "jsonls",
   "pyright",
+  "csharp_ls"
 }
 
 for _, server in ipairs(servers) do
