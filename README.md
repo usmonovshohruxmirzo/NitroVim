@@ -9,6 +9,9 @@
 ## Fuzzy Finder
 ![image](https://github.com/user-attachments/assets/312223ad-0db6-4c60-9d2a-67fc644058a1)
 
+## LazyGit
+![Image](https://github.com/user-attachments/assets/dafd0803-2a79-4b18-b4c3-ccfa646cf3d4)
+
 ## 🛠️ Installation
 
 #### Clone the repository
