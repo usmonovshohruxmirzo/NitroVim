@@ -10,9 +10,6 @@ require("mason-lspconfig").setup({
     "emmet_language_server",
     "jsonls",
     "pyright",
-    "c_sharp",
-    "csharp-language-server",
-    "csharpier",
     "csharp_ls"
   },
   automatic_enable = false
