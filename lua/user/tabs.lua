@@ -5,11 +5,12 @@ require("bufferline").setup({
     options = {
         mode = "buffers",
         separator_style = "slant",
+        diagnostics = "nvim_lsp",
         offsets = {
          {
            filetype = "NvimTree",
            text = "File Explorer",
-           text_align = "left",
+           text_align = "center",
            separator = false,
            padding = 0
          },
@@ -19,6 +20,6 @@ require("bufferline").setup({
         buffer_selected = {
             bold = true,
             italic = false,
-        }
+        },
     }
 })
