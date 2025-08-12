@@ -11,7 +11,7 @@ end
 vim.keymap.set("n", "<leader>t", toggle_term_bottom, { noremap = true, silent = true, desc = "Toggle Terminal Bottom" })
 
 vim.keymap.set("t", "<leader>t", function()
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", false) -- exit terminal mode
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", false)
   vim.cmd("ToggleTerm")
   if vim.fn.bufexists("#") == 1 then
     vim.cmd("wincmd p")
@@ -19,3 +19,6 @@ vim.keymap.set("t", "<leader>t", function()
 end, { noremap = true, silent = true, desc = "Toggle Terminal Bottom" })
 
 vim.keymap.set("n", "<leader>g", ":wincmd p<CR>", { noremap = true, silent = true, desc = "Focus Editor" })
+
+vim.keymap.set("n", "<leader>l", "<Cmd>bnext<CR>", { noremap = true, silent = true, desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>h", "<Cmd>bprevious<CR>", { noremap = true, silent = true, desc = "Previous Buffer" })
