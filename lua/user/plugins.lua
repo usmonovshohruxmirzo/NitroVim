@@ -136,5 +136,14 @@ require("lazy").setup({
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {}
+  },
+
+  -- Auto Pairs
+  {
+    "windwp/nvim-autopairs",
+     event = "InsertEnter",
+     config = function()
+        require("nvim-autopairs").setup({})
+     end,
   }
 })
