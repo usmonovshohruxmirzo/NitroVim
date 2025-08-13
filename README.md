@@ -16,6 +16,10 @@
 
 ![Image](https://github.com/user-attachments/assets/dafd0803-2a79-4b18-b4c3-ccfa646cf3d4)
 
+## Mutiple Themes
+![Image](https://github.com/user-attachments/assets/9f20dc47-d0e9-4c62-ae69-0668fc43010b)
+
+
 ---
 
 ## 🛠️ Installation
