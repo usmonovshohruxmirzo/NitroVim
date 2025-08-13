@@ -102,7 +102,7 @@ vim.api.nvim_create_user_command("ThemeSwitch", function()
   local action_state = require("telescope.actions.state")
 
   pickers.new({}, {
-    prompt_title = "Select Theme Variant",
+    prompt_title = "Select Theme",
     finder = finders.new_table {
       results = vim.tbl_map(function(t)
         return string.format("%s (%s)", t.name, t.variant)
