@@ -16,8 +16,15 @@ require("lazy").setup({
   -- Themes
   { "navarasu/onedark.nvim" },
   { "folke/tokyonight.nvim" },
-
-  -- Bufferline
+  { "tanvirtin/monokai.nvim" }, 
+  { "folke/tokyonight.nvim" },
+  { "tanvirtin/monokai.nvim" },
+  { "ellisonleao/gruvbox.nvim" },
+  { "catppuccin/nvim", name = "catppuccin" },
+  { "Mofiqul/dracula.nvim" },
+  { "shaunsingh/nord.nvim" },
+  { "sainnhe/everforest" },
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "akinsho/bufferline.nvim",
     version = "*",
