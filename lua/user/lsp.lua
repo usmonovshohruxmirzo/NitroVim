@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
     "pyright",
     "csharp_ls"
   },
-  automatic_installation = true,
+  automatic_enable = false,
 })
 
 local lspconfig = require("lspconfig")
@@ -48,7 +48,6 @@ end
 vim.api.nvim_create_autocmd("TextChangedI", {
   callback = function()
     if vim.lsp.buf_is_attached(0) then
-      -- Neovim 0.9+ uses current buffer by default
       pcall(vim.lsp.buf.format, { async = true })
     end
   end,
