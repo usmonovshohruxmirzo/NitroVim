@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
     "pyright",
     "csharp_ls"
   },
-  automatic_enable = false,
+  automatic_enable = true,
 })
 
 local lspconfig = require("lspconfig")
@@ -47,8 +47,10 @@ end
 
 vim.api.nvim_create_autocmd("TextChangedI", {
   callback = function()
-    if vim.lsp.buf_is_attached(0) then
-      pcall(vim.lsp.buf.format, { async = true })
+    if #vim.lsp.get_active_clients({ bufnr = 0 }) > 0 then
+      pcall(function()
+        vim.lsp.buf.format({ async = true })
+      end)
     end
   end,
 })
