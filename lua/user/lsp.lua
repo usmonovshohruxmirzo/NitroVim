@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
     "pyright",
     "csharp_ls"
   },
-  automatic_enable = true,
+  automatic_enable = false,
 })
 
 local lspconfig = require("lspconfig")
@@ -36,7 +36,6 @@ local servers = {
   "emmet_language_server",
   "jsonls",
   "pyright",
-  "csharp_ls"
 }
 
 for _, server in ipairs(servers) do
@@ -44,13 +43,3 @@ for _, server in ipairs(servers) do
     on_attach = on_attach,
   })
 end
-
-vim.api.nvim_create_autocmd("TextChangedI", {
-  callback = function()
-    if #vim.lsp.get_active_clients({ bufnr = 0 }) > 0 then
-      pcall(function()
-        vim.lsp.buf.format({ async = true })
-      end)
-    end
-  end,
-})
