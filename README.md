@@ -66,4 +66,13 @@ choco install neovim
 
 ✅ **NitroVim is fully customizable** — you can tweak any setting, plugin, or keybinding to fit your workflow.
 
-💡 **Currently supports:** HTML, CSS, JavaScript, TypeScript, Python, C#, Next.js, React.js.
+💡 **Currently supports:** 
+- HTML
+- CSS 
+- JavaScript
+- TypeScript
+- Python 
+- C#
+- Next.js 
+- React.js
+- Django Template
