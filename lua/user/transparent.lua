@@ -5,6 +5,10 @@ require("transparent").setup({
     'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
     'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
     'EndOfBuffer',
+
+    'MsgArea', 'VertSplit', 'WinSeparator',
+    'DiagnosticNormal', 'DiagnosticSignWarn', 'DiagnosticSignError', 'DiagnosticSignHint',
+    'TabLine', 'TabLineFill', 'TabLineSel',
   },
 
   extra_groups = {
@@ -14,7 +18,9 @@ require("transparent").setup({
     "BufferLineSeparatorVisible", "BufferLineCloseButton", "BufferLineCloseButtonVisible",
     "BufferLineOffset", "BufferLineOffsetSeparator",
     "TelescopeNormal", "TelescopeBorder", "TelescopePromptNormal", "TelescopePromptBorder",
-    "TelescopeResultsNormal", "TelescopeResultsBorder", "TelescopePreviewNormal", "TelescopePreviewBorder"
+    "TelescopeResultsNormal", "TelescopeResultsBorder", "TelescopePreviewNormal", "TelescopePreviewBorder",
+
+    "TermNormal", "TermNormalNC",
   },
   exclude_groups = {},
   on_clear = function() end
