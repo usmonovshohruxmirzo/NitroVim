@@ -158,5 +158,30 @@ require("lazy").setup({
   {
     "xiyaowong/transparent.nvim",
     lazy = false,
+  },
+
+  -- Gitsigns
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      signs = {
+        add = { text = "▎" },
+        change = { text = "▎" },
+        delete = { text = "" },
+        topdelete = { text = "" },
+        changedelete = { text = "▎" },
+        untracked = { text = "▎" },
+      },
+      on_attach = function(bufnr)
+        local gs = package.loaded.gitsigns
+        local function map(mode, lhs, rhs, desc)
+          vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
+        end
+        map("n", "]h", function() gs.nav_hunk("next") end, "Next Hunk")
+        map("n", "[h", function() gs.nav_hunk("prev") end, "Prev Hunk")
+      end,
+    },
   }
+
 })
