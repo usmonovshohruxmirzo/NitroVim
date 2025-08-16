@@ -20,5 +20,5 @@ end, { noremap = true, silent = true, desc = "Toggle Terminal Bottom" })
 
 vim.keymap.set("n", "<leader>g", ":wincmd p<CR>", { noremap = true, silent = true, desc = "Focus Editor" })
 
-vim.keymap.set("n", "<leader>l", "<Cmd>bnext<CR>", { noremap = true, silent = true, desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>h", "<Cmd>bprevious<CR>", { noremap = true, silent = true, desc = "Previous Buffer" })
+vim.keymap.set("n", "<leader>k", "<Cmd>bnext<CR>", { noremap = true, silent = true, desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>j", "<Cmd>bprevious<CR>", { noremap = true, silent = true, desc = "Previous Buffer" })
