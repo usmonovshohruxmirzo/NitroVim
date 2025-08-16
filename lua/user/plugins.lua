@@ -152,5 +152,11 @@ require("lazy").setup({
      config = function()
         require("nvim-autopairs").setup({})
      end,
+  },
+
+  -- Transparent
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
   }
 })
