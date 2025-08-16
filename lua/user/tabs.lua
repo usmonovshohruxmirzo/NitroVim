@@ -13,6 +13,7 @@ require("bufferline").setup({
         text_align = "center",
         separator = false,
         padding = 0,
+        highlight = "NvimTreeNormal",
       },
     },
   },
