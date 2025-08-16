@@ -19,6 +19,8 @@
 ## 20+ Themes
 ![Image](https://github.com/user-attachments/assets/9f20dc47-d0e9-4c62-ae69-0668fc43010b)
 
+## Transparency Support
+![Images](https://github.com/user-attachments/assets/283e4fa1-12ac-4d6f-8502-7dc9d135aa26)
 
 ---
 
