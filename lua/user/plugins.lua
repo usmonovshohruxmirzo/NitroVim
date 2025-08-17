@@ -182,6 +182,16 @@ require("lazy").setup({
         map("n", "[h", function() gs.nav_hunk("prev") end, "Prev Hunk")
       end,
     },
-  }
+  },
 
+  -- Noice
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+      }
+  }
 })
