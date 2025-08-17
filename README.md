@@ -1,3 +1,5 @@
+# ⚡ The NitroVim Experience ⚡
+
 ![Banner](https://github.com/user-attachments/assets/22d98287-50b1-440e-aadb-de21cc84f5fe)
 
 ## Dashboard
