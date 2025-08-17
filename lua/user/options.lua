@@ -8,3 +8,18 @@ vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 vim.opt.fillchars:append({ eob = " " })
+vim.o.autoread = true
+
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  command = "checktime",
+})
+
+vim.api.nvim_create_autocmd("FileChangedShell", {
+  callback = function()
+    if vim.fn.filereadable(vim.fn.expand("%")) == 0 then
+      vim.schedule(function()
+        vim.cmd("bdelete")
+      end)
+    end
+  end,
+})
