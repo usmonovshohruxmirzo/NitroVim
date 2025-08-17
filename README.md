@@ -1,7 +1,5 @@
 ![Banner](https://github.com/user-attachments/assets/22d98287-50b1-440e-aadb-de21cc84f5fe)
 
-# ⚡ The NITROVIM Experience ⚡
-
 ## Dashboard
 
 ![image](https://github.com/user-attachments/assets/a6e0dcf7-fbf1-4496-aa72-603f6c7e6b98)
