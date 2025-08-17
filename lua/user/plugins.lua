@@ -193,5 +193,11 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
       }
+  },
+  
+  -- Smear Cursor
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {},
   }
 })
