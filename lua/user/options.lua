@@ -25,8 +25,21 @@ vim.api.nvim_create_autocmd("FileChangedShell", {
 })
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = {
+    prefix = "●",
+    spacing = 2,
+  },
   signs = true,
   underline = true,
   update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    focusable = true,
+    max_width = 80,
+    wrap = true,
+    source = "always",
+    header = "",
+    prefix = "",
+  },
 })
