@@ -217,7 +217,7 @@ require("lazy").setup({
   -- Trouble
   {
     "folke/trouble.nvim",
-    opts = {},.
+    opts = {},
     cmd = "Trouble",
   }
 
