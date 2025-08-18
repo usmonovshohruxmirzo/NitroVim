@@ -10,5 +10,6 @@ require("nvim-treesitter.configs").setup({
     "vue"
   },
   highlight = { enable = true },
-  indent = { enable = true }
+  indent = { enable = true },
+  autotag = { enable = true },
 })
