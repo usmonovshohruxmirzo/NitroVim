@@ -199,5 +199,10 @@ require("lazy").setup({
   {
     "sphamba/smear-cursor.nvim",
     opts = {},
+  },
+
+  -- Vim Surround
+  {
+    "tpope/vim-surround"
   }
 })
