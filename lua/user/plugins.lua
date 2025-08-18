@@ -206,9 +206,19 @@ require("lazy").setup({
     "tpope/vim-surround"
   },
   
-{
-  "windwp/nvim-ts-autotag",
-  config = function()
-    require('nvim-ts-autotag').setup()
-  end
-}})
+  -- Auto Tag
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end
+  },
+
+  -- Trouble
+  {
+    "folke/trouble.nvim",
+    opts = {},.
+    cmd = "Trouble",
+  }
+
+})
