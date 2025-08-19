@@ -11,7 +11,6 @@ require("mason-lspconfig").setup({
         "jsonls",
         "pyright",
         "csharp_ls",
-        "volar",
     },
     automatic_installation = true,
 })
