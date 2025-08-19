@@ -3,17 +3,10 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 local fmt = require("luasnip.extras.fmt").fmt
+local rep = require("luasnip.extras").rep
 
 -- HTML
 ls.add_snippets("html", {
-  s("class", {
-    t('class="'), i(1), t('"')
-  }),
-
-  s("id", {
-    t('id="'), i(1), t('"')
-  }),
-
   s("base", {
       t({"<!DOCTYPE html>", "<html lang=\"en\">", "<head>", "    <meta charset=\"UTF-8\">", "    <title>"}), 
       i(1, "Title"), 
@@ -305,4 +298,47 @@ ls.add_snippets("python", {
 
   -- Return statement
   s("ret", fmt("return {}", { i(1, "") })),
+})
+
+-- C#
+ls.add_snippets("cs", {
+  -- Console.WriteLine
+  s("cwr", fmt([[Console.WriteLine({});]], { i(1, "\"text\"") })),
+
+  -- Class
+  s("class", fmt([[
+    public class {} 
+    {{
+        {}
+    }}
+  ]], { i(1, "ClassName"), i(2, "// members") })),
+
+  -- Main method
+  s("main", fmt([[
+    static void Main(string[] args)
+    {{
+        {}
+    }}
+  ]], { i(1, "Console.WriteLine(\"Hello World\");") })),
+
+  -- For loop
+s("for", fmt([[
+  for (int {} = 0; {} < {}; {}++) 
+  {{
+      {}
+  }}
+]], { i(1, "i"), rep(1), i(2, "n"), rep(1), i(3, "// code") })),
+
+  -- If statement
+  s("if", fmt([[
+    if ({}) 
+    {{
+        {}
+    }}
+  ]], { i(1, "condition"), i(2, "// code") })),
+
+  -- Property
+  s("prop", fmt([[
+    public {} {} {{ get; set; }}
+  ]], { i(1, "string"), i(2, "PropertyName") })),
 })
