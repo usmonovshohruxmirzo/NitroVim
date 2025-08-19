@@ -7,7 +7,8 @@ require("nvim-treesitter.configs").setup({
     "css",
     "json",
     "c_sharp",
-    "vue"
+    "vue",
+    "astro"
   },
   highlight = { enable = true },
   indent = { enable = true },
