@@ -1,5 +1,5 @@
 vim.api.nvim_create_user_command(
-  "mkdir",
+  "MkDir",
   function(opts)
     local dir = opts.args
     if dir == "" then
