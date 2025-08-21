@@ -34,3 +34,8 @@ map("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>", { desc = "
 map("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", { desc = "LSP Definitions / references / ..." })
 map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "Location List (Trouble)" })
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix List (Trouble)" })
+
+-- Code formatting
+map("n", "<leader>f", function ()
+  vim.lsp.buf.format()
+end)
