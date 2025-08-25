@@ -10,7 +10,7 @@ require("mason-lspconfig").setup({
         "emmet_language_server",
         "jsonls",
         "pyright",
-        "csharp_ls",
+        "omnisharp",
     },
     automatic_installation = true,
 })
@@ -38,7 +38,7 @@ local servers = {
     "emmet_language_server",
     "jsonls",
     "pyright",
-    "csharp_ls",
+    "omnisharp",
 }
 
 for _, server in ipairs(servers) do
@@ -46,3 +46,12 @@ for _, server in ipairs(servers) do
         on_attach = on_attach,
     })
 end
+
+lspconfig.omnisharp.setup({
+    cmd = { "omnisharp" },
+    on_attach = on_attach,
+    enable_editorconfig_support = true,
+    enable_roslyn_analyzers = true,
+    organize_imports_on_format = true,
+    enable_import_completion = true,
+})
