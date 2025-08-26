@@ -341,4 +341,7 @@ s("for", fmt([[
   s("prop", fmt([[
     public {} {} {{ get; set; }}
   ]], { i(1, "string"), i(2, "PropertyName") })),
+
+  -- get/set
+s("get", t("{ get; set; }")),
 })
