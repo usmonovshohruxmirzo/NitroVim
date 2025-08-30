@@ -344,4 +344,23 @@ ls.add_snippets("cs", {
 
   -- get/set
   s("get", t("{ get; set; }")),
+
+
+  -- Full Program Skeleton
+  ls.add_snippets("cs", {
+    s("prog", fmt([[
+    using System;
+
+    namespace {}
+    {{
+        class {}
+        {{
+            static void Main(string[] args)
+            {{
+                Console.WriteLine("Hello World");
+            }}
+        }}
+    }}
+  ]], { i(1, "MyNamespace"), i(2, "Program") })),
+  })
 })
