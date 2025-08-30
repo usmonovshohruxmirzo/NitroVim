@@ -29,6 +29,7 @@ require("transparent").setup({
 require('transparent').clear_prefix('BufferLine')
 require('transparent').clear_prefix('NeoTree')
 require('transparent').clear_prefix('lualine')
+require("transparent").clear_prefix('ToggleTerm')
 
 local buffer_offset_groups = { "BufferLineOffset", "BufferLineOffsetSeparator" }
 for _, group in ipairs(buffer_offset_groups) do
