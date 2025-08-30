@@ -16,15 +16,15 @@ require("lazy").setup({
   -- Themes
   { "navarasu/onedark.nvim" },
   { "folke/tokyonight.nvim" },
-  { "tanvirtin/monokai.nvim" }, 
+  { "tanvirtin/monokai.nvim" },
   { "folke/tokyonight.nvim" },
   { "tanvirtin/monokai.nvim" },
   { "ellisonleao/gruvbox.nvim" },
-  { "catppuccin/nvim", name = "catppuccin" },
+  { "catppuccin/nvim",         name = "catppuccin" },
   { "Mofiqul/dracula.nvim" },
   { "shaunsingh/nord.nvim" },
   { "sainnhe/everforest" },
-  { "rose-pine/neovim", name = "rose-pine" },
+  { "rose-pine/neovim",        name = "rose-pine" },
   {
     "akinsho/bufferline.nvim",
     version = "*",
@@ -87,12 +87,12 @@ require("lazy").setup({
       vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
     end,
   },
-  
+
   -- LSP + Mason
   {
-      "mason-org/mason.nvim",
-      "mason-org/mason-lspconfig.nvim",
-      "neovim/nvim-lspconfig",
+    "mason-org/mason.nvim",
+    "mason-org/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   },
 
   -- Completion (nvim-cmp)
@@ -109,32 +109,32 @@ require("lazy").setup({
 
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  
-  -- CSS utilities 
+
+  -- CSS utilities
   { "norcalli/nvim-colorizer.lua" },
-  { "NvChad/nvim-colorizer.lua" },       
+  { "NvChad/nvim-colorizer.lua" },
 
   -- Auto Save
   {
-  "pocco81/auto-save.nvim",
-  config = function()
-    require("auto-save").setup {
-      enabled = true,
-      execution_message = {
-        message = function() return ("AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S")) end,
-        dim = 0.18,
-        cleaning_interval = 1250,
-      },
-      trigger_events = {"InsertLeave", "TextChanged"},
-      conditions = {
-        exists = true,
-        filename_is_not = {},
-        filetype_is_not = {},
-        modifiable = true,
-      },
-      write_all_buffers = false,
-      debounce_delay = 135,
-    }
+    "pocco81/auto-save.nvim",
+    config = function()
+      require("auto-save").setup {
+        enabled = true,
+        execution_message = {
+          message = function() return ("AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S")) end,
+          dim = 0.18,
+          cleaning_interval = 1250,
+        },
+        trigger_events = { "InsertLeave", "TextChanged" },
+        conditions = {
+          exists = true,
+          filename_is_not = {},
+          filetype_is_not = {},
+          modifiable = true,
+        },
+        write_all_buffers = false,
+        debounce_delay = 135,
+      }
     end,
   },
 
@@ -148,10 +148,10 @@ require("lazy").setup({
   -- Auto Pairs
   {
     "windwp/nvim-autopairs",
-     event = "InsertEnter",
-     config = function()
-        require("nvim-autopairs").setup({})
-     end,
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end,
   },
 
   -- Transparent
@@ -192,9 +192,9 @@ require("lazy").setup({
     dependencies = {
       "MunifTanjim/nui.nvim",
       "rcarriga/nvim-notify",
-      }
+    }
   },
-  
+
   -- Smear Cursor
   {
     "sphamba/smear-cursor.nvim",
@@ -205,7 +205,7 @@ require("lazy").setup({
   {
     "tpope/vim-surround"
   },
-  
+
   -- Auto Tag
   {
     "windwp/nvim-ts-autotag",
@@ -219,6 +219,8 @@ require("lazy").setup({
     "folke/trouble.nvim",
     opts = {},
     cmd = "Trouble",
-  }
+  },
 
+  { "OrangeT/vim-csharp" },
+  { "hrsh7th/vim-vsnip" },
 })
