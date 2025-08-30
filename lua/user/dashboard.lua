@@ -62,8 +62,8 @@ dashboard.setup({
     footer = {
       '',
       '',
-      '💻 github.com/usmonovshohruxmirzo',
-      '📦 @webbro-software',
+      '💻 github.com/NitroVim',
+      '📦 @NitroBrain',
       '',
       '⚡️ Fast. Minimal. Lua.',
       '',
