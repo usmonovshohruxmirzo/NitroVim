@@ -1,6 +1,6 @@
 # ⚡ The NitroVim Experience ⚡
 
-![Banner](https://github.com/user-attachments/assets/61f45cd8-4dda-47e3-a01f-bddc1ffcbad6)
+![Banner](https://github.com/user-attachments/assets/60141194-0f2b-4be2-bd62-638bed75ee52)
 
 NitroVim is a **modern, fast, and fully customizable Neovim distribution** designed to boost developer productivity out-of-the-box. It comes preconfigured with LSP, autocompletion, snippets, file explorer, fuzzy finder, Git integration, themes, transparency, and more.
 
