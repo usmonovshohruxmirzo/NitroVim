@@ -64,7 +64,7 @@ local function setup_completion()
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
-      
+
       ['<Tab>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
@@ -76,7 +76,7 @@ local function setup_completion()
           fallback()
         end
       end, { 'i', 's' }),
-      
+
       ['<S-Tab>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_prev_item()
@@ -89,8 +89,8 @@ local function setup_completion()
     }),
 
     sources = cmp.config.sources({
-      { name = 'buffer', priority = 700 },
-      { name = 'path', priority = 600 },
+      { name = 'buffer',  priority = 700 },
+      { name = 'path',    priority = 600 },
       { name = 'luasnip', priority = 800 },
     }),
 
@@ -98,13 +98,13 @@ local function setup_completion()
       fields = { "kind", "abbr", "menu" },
       format = function(entry, vim_item)
         vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind] or "", vim_item.kind)
-        
+
         vim_item.menu = ({
           buffer = "[Buffer]",
           path = "[Path]",
           luasnip = "[Snippet]",
         })[entry.source.name]
-        
+
         return vim_item
       end,
     },
@@ -125,7 +125,6 @@ local function setup_completion()
       { name = 'cmdline' }
     })
   })
-
 end
 
 setup_completion()
@@ -133,3 +132,4 @@ setup_completion()
 return {
   setup = setup_completion,
 }
+
