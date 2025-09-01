@@ -22,6 +22,24 @@ map("t", "<leader>t", function()
   end
 end, { noremap = true, silent = true, desc = "Toggle Terminal Bottom" })
 
+-- Terminal Focus Toggle
+map("n", "<leader>ft", function()
+  if vim.bo.filetype == "NvimTree" then
+    vim.cmd("wincmd l")
+  end
+  local term_buf = vim.fn.bufnr("term://")
+  if term_buf ~= -1 and vim.fn.bufwinnr(term_buf) ~= -1 then
+    vim.cmd("wincmd p")
+  else
+    vim.cmd("ToggleTerm direction=horizontal size=15")
+  end
+end, { noremap = true, silent = true, desc = "Toggle Terminal/Editor Focus" })
+
+map("t", "<leader>ft", function()
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", false)
+  vim.cmd("wincmd p")
+end, { noremap = true, silent = true, desc = "Toggle Terminal/Editor Focus" })
+
 -- Editor Navigation
 map("n", "<leader>g", ":wincmd p<CR>", { noremap = true, silent = true, desc = "Focus Editor" })
 map("n", "<leader>k", "<Cmd>bnext<CR>", { noremap = true, silent = true, desc = "Next Buffer" })
@@ -36,6 +54,6 @@ map("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>", { desc = "Location Lis
 map("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix List (Trouble)" })
 
 -- Code formatting
-map("n", "<leader>f", function ()
+map("n", "<leader>f", function()
   vim.lsp.buf.format()
-end)
+end, { noremap = true, silent = true, desc = "Format Code" })
