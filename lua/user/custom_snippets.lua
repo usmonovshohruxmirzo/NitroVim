@@ -243,6 +243,13 @@ ls.add_snippets("typescriptreact", {
   ]], { i(1, "ComponentName"), i(1), i(1), i(2, "// content"), i(1) })),
 })
 
+-- JavaScript
+
+ls.add_snippets("javascript", {
+  -- console log
+  s("log", fmt([[console.log({});]], { i(1, "\"Hello World\"") }))
+})
+
 -- Python
 ls.add_snippets("python", {
   -- Function definition
