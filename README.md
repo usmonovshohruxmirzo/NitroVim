@@ -96,9 +96,9 @@ choco install neovim
 
 NitroVim is built to be **fully customizable**.
 
-* Edit `lua/plugins.lua` to add or remove plugins
-* Change keybindings in `lua/keymaps.lua`
-* Tweak UI, themes, and transparency in `lua/config.lua`
+* Edit `lua/user/plugins.lua` to add or remove plugins
+* Change keybindings in `lua/user/keymaps.lua`
+* Tweak UI, themes, and transparency in `lua/user/colorschemes.lua`
 
 ---
 
