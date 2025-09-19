@@ -7,7 +7,7 @@ require('lualine').setup {
     disabled_filetypes = { statusline = {}, winbar = {} },
     always_divide_middle = true,
     globalstatus = true,
-    refresh = { statusline = 100, tabline = 100, winbar = 100 },
+    refresh = { statusline = 1000, tabline = 100, winbar = 100 },
   },
   sections = {
     lualine_a = { 'mode' },
@@ -34,7 +34,9 @@ require('lualine').setup {
       end, color = { fg = '#ff9e64' } }
     },
     lualine_y = { 'progress' },
-    lualine_z = { 'location' }
+    lualine_z = { 'location',
+      { function() return os.date('%H:%M') end }
+    }
   },
   inactive_sections = {
     lualine_a = {},
