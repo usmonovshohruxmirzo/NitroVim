@@ -232,6 +232,7 @@ require("lazy").setup({
   -- C#
   { "OrangeT/vim-csharp" },
   { "hrsh7th/vim-vsnip" },
+  { "Hoffs/omnisharp-extended-lsp.nvim" },
 
   -- Git Blame
   {

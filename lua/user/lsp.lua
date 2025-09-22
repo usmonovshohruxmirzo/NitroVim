@@ -27,6 +27,12 @@ local on_attach = function(client, bufnr)
   map(bufnr, "n", "gr", "<Cmd>lua vim.lsp.buf.references()<CR>", opts)
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local cmp_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if cmp_ok then
+  capabilities = cmp_lsp.default_capabilities(capabilities)
+end
+
 local lspconfig = require("lspconfig")
 
 local servers = {
@@ -38,20 +44,24 @@ local servers = {
   "emmet_language_server",
   "jsonls",
   "pyright",
-  "omnisharp",
 }
 
 for _, server in ipairs(servers) do
   lspconfig[server].setup({
     on_attach = on_attach,
+    capabilities = capabilities,
   })
 end
 
 lspconfig.omnisharp.setup({
   cmd = { "omnisharp" },
   on_attach = on_attach,
+  capabilities = capabilities,
   enable_editorconfig_support = true,
   enable_roslyn_analyzers = true,
   organize_imports_on_format = true,
   enable_import_completion = true,
+  handlers = {
+    ["textDocument/definition"] = require('omnisharp_extended').handler,
+  },
 })
