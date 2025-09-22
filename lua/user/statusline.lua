@@ -11,30 +11,30 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', {
-      'diagnostics',
-      sources = { 'nvim_lsp' },
-      sections = { 'error', 'warn', 'info', 'hint' },
-      colored = true,
-      update_in_insert = false,
-      always_visible = true,
-    } },
+    lualine_b = {
+      'branch',
+      'diff',
+      {
+        'diagnostics',
+        sources = { 'nvim_lsp' },
+        sections = { 'error', 'warn', 'info', 'hint' },
+        colored = true,
+        update_in_insert = false,
+        always_visible = true,
+      }
+    },
     lualine_c = { { 'filename', file_status = true, path = 1 } },
     lualine_x = {
+      'filesize',
       'encoding',
       'fileformat',
       'filetype',
-      { function()
-        local clients = vim.lsp.get_active_clients()
-        if #clients > 0 then
-          return ' LSP: ' .. clients[1].name
-        else
-          return ''
-        end
-      end, color = { fg = '#ff9e64' } }
+      'searchcount',
+      'selectioncount',
     },
     lualine_y = { 'progress' },
-    lualine_z = { 'location',
+    lualine_z = {
+      'location',
       { function() return os.date('%H:%M') end }
     }
   },
