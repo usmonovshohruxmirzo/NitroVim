@@ -250,4 +250,4 @@ MIT © [Shohruxmirzo Usmonov](https://github.com/usmonovshohruxmirzo)
 
 ---
 
-<p align="center">Made with ❤️ by the NitroVim team</p>
+<p align="center">Made with ❤️ by the <a href="https://github.com/NitroBrain">NitroBrain</a> team</p>
