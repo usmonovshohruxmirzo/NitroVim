@@ -226,9 +226,22 @@ vim.keymap.set('mode', 'key', 'action')
 ```
 
 3. Common issues:
+
    - Icons not showing? Install a Nerd Font
    - LSP not working? Run `:Mason` to install servers
    - Slow startup? Check `:Lazy profile`
+
+4. Reporting Issues:
+   If you encounter any problems:
+   1. Check the [existing issues](https://github.com/usmonovshohruxmirzo/nitrovim/issues) first
+   2. [Open a new issue](https://github.com/usmonovshohruxmirzo/nitrovim/issues/new) with:
+      - NitroVim version (`git rev-parse HEAD` in your config directory)
+      - Neovim version (`:version`)
+      - Operating system
+      - Steps to reproduce
+      - Expected vs actual behavior
+      - Screenshots/error messages if applicable
+      - Relevant config files or changes you made
 
 ## 📊 Performance
 
