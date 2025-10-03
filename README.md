@@ -211,6 +211,15 @@ Edit `lua/user/keymaps.lua`:
 vim.keymap.set('mode', 'key', 'action')
 ```
 
+## 📸 Screenshots
+
+![image](https://github.com/user-attachments/assets/a6e0dcf7-fbf1-4496-aa72-603f6c7e6b98)
+![image](https://github.com/user-attachments/assets/f4c4ed07-f7fc-48c5-9911-0700bf031d35)
+![image](https://github.com/user-attachments/assets/312223ad-0db6-4c60-9d2a-67fc644058a1)
+![Image](https://github.com/user-attachments/assets/dafd0803-2a79-4b18-b4c3-ccfa646cf3d4)
+![Image](https://github.com/user-attachments/assets/9f20dc47-d0e9-4c62-ae69-0668fc43010b)
+![Images](https://github.com/user-attachments/assets/150523c7-4978-435e-baee-97b034da0b1d)
+
 ## 🔧 Troubleshooting
 
 1. Run health checks:
