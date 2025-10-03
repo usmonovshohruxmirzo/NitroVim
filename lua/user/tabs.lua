@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 vim.opt.termguicolors = true
 vim.opt.showtabline = 5
 

@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 local function has_plugin(name)
   local ok, _ = pcall(require, name)
   return ok

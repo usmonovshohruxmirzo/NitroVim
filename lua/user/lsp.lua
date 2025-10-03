@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 require("mason").setup()
 
 require("mason-lspconfig").setup({
@@ -11,6 +14,7 @@ require("mason-lspconfig").setup({
     "jsonls",
     "pyright",
     "omnisharp",
+    "lua_ls"
   },
   automatic_installation = true,
 })

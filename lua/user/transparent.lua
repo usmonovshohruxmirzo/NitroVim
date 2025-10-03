@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 require("transparent").setup({
   groups = {
     'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',

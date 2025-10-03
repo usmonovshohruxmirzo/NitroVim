@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 require('telescope').setup{
   defaults = {
     file_ignore_patterns = {

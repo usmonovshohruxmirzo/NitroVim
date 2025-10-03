@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 local dashboard = require('dashboard')
 
 local quotes = {

@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 local map = vim.keymap.set
 
 -- File Explorer (NvimTree)

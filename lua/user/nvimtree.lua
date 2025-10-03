@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
   vim.notify("nvim-tree not found!", vim.log.levels.ERROR)

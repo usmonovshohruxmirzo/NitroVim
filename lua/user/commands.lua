@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 vim.api.nvim_create_user_command(
   "MkDir",
   function(opts)
