@@ -213,12 +213,23 @@ vim.keymap.set('mode', 'key', 'action')
 
 ## 📸 Screenshots
 
-![image](https://github.com/user-attachments/assets/a6e0dcf7-fbf1-4496-aa72-603f6c7e6b98)
-![image](https://github.com/user-attachments/assets/f4c4ed07-f7fc-48c5-9911-0700bf031d35)
-![image](https://github.com/user-attachments/assets/312223ad-0db6-4c60-9d2a-67fc644058a1)
-![Image](https://github.com/user-attachments/assets/dafd0803-2a79-4b18-b4c3-ccfa646cf3d4)
-![Image](https://github.com/user-attachments/assets/9f20dc47-d0e9-4c62-ae69-0668fc43010b)
-![Images](https://github.com/user-attachments/assets/150523c7-4978-435e-baee-97b034da0b1d)
+#### Dashboard
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/2da8d540-8870-4560-a58b-f75c5a5860e4" />
+
+#### Editor
+<img width="1920" height="1019" alt="Screenshot (365)" src="https://github.com/user-attachments/assets/a0207659-b734-4271-b83e-c57f37d2b25e" />
+
+#### Fuzzy Finder
+<img width="1920" height="1020" alt="Screenshot (366)" src="https://github.com/user-attachments/assets/0cddb8c4-e139-425a-8f65-8ce4da535953" />
+
+#### LazyGit
+<img width="1920" height="1017" alt="Screenshot (367)" src="https://github.com/user-attachments/assets/606190d4-5923-4ed4-a7b3-b6c3249106e2" />
+
+#### 20+ Themes
+<img width="1920" height="1017" alt="Screenshot (368)" src="https://github.com/user-attachments/assets/bcd698e2-0ffb-43a7-afd0-1b4956667ca6" />
+
+#### Transparency
+<img width="1920" height="1035" alt="Screenshot (369)" src="https://github.com/user-attachments/assets/925b0237-326c-438d-b6ba-755121a76edf" />
 
 ## 🔧 Troubleshooting
 
