@@ -9,6 +9,8 @@ local quotes = {
   "⚡ Focus on editing, not configuring. NitroVim’s got your back.",
   "🌌 Small configs, big productivity.",
   "🔥 Code fast, exit faster. :wq",
+  "📖 Learn one command a day, master Vim in a year.",
+  "🎯 Motion > Mouse. Always.",
 }
 
 math.randomseed(os.time())
