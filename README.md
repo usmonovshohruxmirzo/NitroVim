@@ -277,7 +277,7 @@ vim.keymap.set('mode', 'key', 'action')
 
 ## 📜 License
 
-MIT © [Shohruxmirzo Usmonov](https://github.com/usmonovshohruxmirzo)
+[MIT](./LICENSE) © [Shohruxmirzo Usmonov](https://github.com/usmonovshohruxmirzo)
 
 ---
 
