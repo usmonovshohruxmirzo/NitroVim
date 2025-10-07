@@ -212,7 +212,6 @@ vim.keymap.set('mode', 'key', 'action')
 ## 📸 Screenshots
 
 #### Dashboard
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/2da8d540-8870-4560-a58b-f75c5a5860e4" />
 <img width="1920" height="1039" alt="Screenshot (386)" src="https://github.com/user-attachments/assets/a26b4c29-e4e2-44fe-910a-88a5d258e1d4" />
 
 #### Editor
