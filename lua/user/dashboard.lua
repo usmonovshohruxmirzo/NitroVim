@@ -20,23 +20,21 @@ dashboard.setup({
   theme = 'doom',
   config = {
     header = {
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      '███╗   ██╗██╗████████╗██████╗  ██████╗ ██╗   ██╗██╗███╗   ███╗',
-      '████╗  ██║██║╚══██╔══╝██╔══██╗██╔═══██╗██║   ██║██║████╗ ████║',
-      '██╔██╗ ██║██║   ██║   ██████╔╝██║   ██║██║   ██║██║██╔████╔██║',
-      '██║╚██╗██║██║   ██║   ██╔══██╗██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║',
-      '██║ ╚████║██║   ██║   ██║  ██║╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║',
-      '╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝',
       '',
-      '⚡ The NITROVIM Experience ⚡',
       '',
+      '',
+      '',
+      ' ██████   █████ █████ ███████████ ███████████      ███████    █████   █████ █████ ██████   ██████',
+      '░░██████ ░░███ ░░███ ░█░░░███░░░█░░███░░░░░███   ███░░░░░███ ░░███   ░░███ ░░███ ░░██████ ██████ ',
+      ' ░███░███ ░███  ░███ ░   ░███  ░  ░███    ░███  ███     ░░███ ░███    ░███  ░███  ░███░█████░███ ',
+      ' ░███░░███░███  ░███     ░███     ░██████████  ░███      ░███ ░███    ░███  ░███  ░███░░███ ░███ ',
+      ' ░███ ░░██████  ░███     ░███     ░███░░░░░███ ░███      ░███ ░░███   ███   ░███  ░███ ░░░  ░███ ',
+      ' ░███  ░░█████  ░███     ░███     ░███    ░███ ░░███     ███   ░░░█████░    ░███  ░███      ░███ ',
+      ' █████  ░░█████ █████    █████    █████   █████ ░░░███████░      ░░███      █████ █████     █████',
+      '░░░░░    ░░░░░ ░░░░░    ░░░░░    ░░░░░   ░░░░░    ░░░░░░░         ░░░      ░░░░░ ░░░░░     ░░░░░ ',
+      '                                                                                                 ',
+      '',
+      'Turn Coding into Nitro Mode',
       '',
       '',
     },
@@ -71,6 +69,28 @@ dashboard.setup({
         action = 'Telescope find_files',
       },
       {
+        icon = '  ',
+        icon_hl = 'DashboardCenter',
+        desc = 'Projects',
+        desc_hl = 'DashboardCenter',
+        key = 'p',
+        keymap = 'SPC p',
+        key_hl = 'DashboardCenter',
+        action = 'Telescope projects',
+      },
+      {
+        icon = '  ',
+        icon_hl = 'DashboardCenter',
+        desc = 'Restore Last Session',
+        desc_hl = 'DashboardCenter',
+        key = 'l',
+        keymap = 'SPC l',
+        key_hl = 'DashboardCenter',
+        action = function()
+          require("auto-session").RestoreSession()
+        end,
+      },
+      {
         icon = '  ',
         icon_hl = 'DashboardCenter',
         desc = 'File Browser',
@@ -99,7 +119,42 @@ dashboard.setup({
         action = 'Lazy update',
       },
       {
-        icon = '  ', -- Quit
+        icon = '  ',
+        icon_hl = 'DashboardCenter',
+        desc = 'Update NitroVim',
+        desc_hl = 'DashboardCenter',
+        key = 'U',
+        key_hl = 'DashboardCenter',
+        action = function()
+          local config_path = vim.fn.stdpath("config")
+          vim.cmd("echo 'Updating NitroVim...'")
+
+          local output = {}
+
+          vim.fn.jobstart({ "git", "-C", config_path, "pull" }, {
+            stdout_buffered = true,
+            on_stdout = function(_, data)
+              if data then
+                for _, line in ipairs(data) do
+                  if line ~= "" then
+                    table.insert(output, line)
+                  end
+                end
+              end
+            end,
+            on_exit = function()
+              local all_output = table.concat(output, "\n")
+              if all_output:match("Already up to date") then
+                vim.notify("NitroVim is already up to date.", vim.log.levels.INFO)
+              else
+                vim.notify("NitroVim update complete! Restart Neovim.", vim.log.levels.INFO)
+              end
+            end,
+          })
+        end,
+      },
+      {
+        icon = '  ',
         icon_hl = 'DashboardCenter',
         desc = 'Quit',
         desc_hl = 'DashboardCenter',
