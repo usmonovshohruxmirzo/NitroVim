@@ -276,6 +276,38 @@ require("lazy").setup({
 
       vim.api.nvim_set_keymap("n", "<leader>v", ":lua Toggle_venn()<CR>", { noremap = true, silent = true })
     end
+  },
+
+  -- Project
+  {
+    "ahmedkhalf/project.nvim",
+    event = "VimEnter",
+    config = function()
+      require("project_nvim").setup({
+        detection_methods = { "pattern", "lsp" },
+        patterns = { ".git", "package.json", "Makefile", "pyproject.toml" },
+        silent_chdir = false,
+        manual_mode = true,
+      })
+      require("telescope").load_extension("projects")
+    end,
+  },
+
+  -- Auto Session
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    config = function()
+      vim.o.sessionoptions = "buffers,curdir,tabpages,winsize,help,globals,skiprtp,folds,localoptions"
+
+      require("auto-session").setup({
+        log_level = "info",
+        auto_session_enabled = true,
+        auto_save_enabled = true,
+        auto_restore_enabled = false,
+        auto_session_suppress_dirs = { "~/" },
+      })
+    end,
   }
 
 })
