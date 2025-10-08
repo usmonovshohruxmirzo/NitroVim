@@ -8,8 +8,14 @@ require("nvim-treesitter.configs").setup({
     "json",
     "c_sharp",
     "vue",
-    "astro"
+    "astro",
+    "markdown",
+    "markdown_inline",
+    "python"
   },
-  highlight = { enable = true },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false;
+  },
   indent = { enable = true },
 })
