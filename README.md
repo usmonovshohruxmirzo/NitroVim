@@ -2,6 +2,34 @@
 
 ### A modern, blazing-fast Neovim distribution designed for an exceptional development experience.
 
+<p align="center">
+  <!-- GitHub Repo Stats -->
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/stargazers">
+    <img src="https://img.shields.io/github/stars/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=yellow" alt="Stars" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/network/members">
+    <img src="https://img.shields.io/github/forks/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=blue" alt="Forks" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/issues">
+    <img src="https://img.shields.io/github/issues/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=orange" alt="Issues" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/pulls">
+    <img src="https://img.shields.io/github/issues-pr/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=purple" alt="Pull Requests" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=success" alt="License" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases/latest">
+    <img src="https://img.shields.io/github/v/release/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=brightgreen" alt="Latest Release" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases">
+    <img src="https://img.shields.io/github/release-date/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=blue" alt="Release Date" />
+  </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases">
+    <img src="https://img.shields.io/github/v/tag/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=yellow" alt="Latest Tag" />
+  </a>
+</p>
+
 ## 📚 Table of Contents
 
 - [Features](#-features)
