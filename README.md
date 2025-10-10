@@ -3,7 +3,6 @@
 ### A modern, blazing-fast Neovim distribution designed for an exceptional development experience.
 
 <p align="center">
-  <!-- GitHub Repo Stats -->
   <a href="https://github.com/usmonovshohruxmirzo/nitrovim/stargazers">
     <img src="https://img.shields.io/github/stars/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=yellow" alt="Stars" />
   </a>
@@ -21,9 +20,6 @@
   </a>
   <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases/latest">
     <img src="https://img.shields.io/github/v/release/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=brightgreen" alt="Latest Release" />
-  </a>
-  <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases">
-    <img src="https://img.shields.io/github/release-date/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=blue" alt="Release Date" />
   </a>
   <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases">
     <img src="https://img.shields.io/github/v/tag/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=yellow" alt="Latest Tag" />
