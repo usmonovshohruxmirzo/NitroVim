@@ -52,7 +52,7 @@ require("transparent").setup({
     "Pmenu", "PmenuSbar",
   },
   exclude_groups = {
-    "lualine_a_normal", "lualine_a_insert", "lualine_a_visual", "lualine_a_replace", "lualine_a_command",
+    "lualine_a_normal", "lualine_a_insert", "lualine_a_visual", "lualine_a_replace", "lualine_a_command", "lualine_a_terminal"
   },
   on_clear = function() end,
 })
