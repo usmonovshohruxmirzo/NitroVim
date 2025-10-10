@@ -189,6 +189,8 @@ Core plugins included:
 - bufferline (Tab management)
 - lualine (Status line)
 - noice.nvim (UI improvements)
+- project.nvim (Project management)
+- auto-session (Session management)
 
 ## 🎯 Language Support
 
