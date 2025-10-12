@@ -46,7 +46,7 @@
 - ⚡ **Lazy Loading** - Fast startup times
 - 📦 **Git Integration** - Built-in source control
 - 🔌 **Plugin System** - Extensible architecture
-
+- 🪟 **Transparent UI** — Adjustable window and panel opacity for seamless desktop blending
 ## ⌨ Keybindings
 
 ### General
