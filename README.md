@@ -1,6 +1,6 @@
 ![Banner](https://github.com/user-attachments/assets/60141194-0f2b-4be2-bd62-638bed75ee52)
 
-<h1 align="center">A modern, blazing-fast Neovim distribution designed for an exceptional development experience.</h1>
+<h3 align="center">A modern, blazing-fast Neovim distribution designed for an exceptional development experience.</h3>
 
 <p align="center">
   <a href="https://github.com/usmonovshohruxmirzo/nitrovim/stargazers">
