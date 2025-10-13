@@ -1,6 +1,6 @@
 ![Banner](https://github.com/user-attachments/assets/60141194-0f2b-4be2-bd62-638bed75ee52)
 
-### A modern, blazing-fast Neovim distribution designed for an exceptional development experience.
+<h3 align="center">A modern, blazing-fast Neovim distribution designed for an exceptional development experience.</h3>
 
 <p align="center">
   <a href="https://github.com/usmonovshohruxmirzo/nitrovim/stargazers">
@@ -46,7 +46,7 @@
 - ⚡ **Lazy Loading** - Fast startup times
 - 📦 **Git Integration** - Built-in source control
 - 🔌 **Plugin System** - Extensible architecture
-
+- 🪟 **Transparent UI** — Adjustable window and panel opacity for seamless desktop blending
 ## ⌨ Keybindings
 
 ### General
@@ -78,8 +78,8 @@
 | `<C-j>`   | Window down     |
 | `<C-k>`   | Window up       |
 | `<C-l>`   | Window right    |
-| `<Tab>`   | Next buffer     |
-| `<S-Tab>` | Previous buffer |
+| `<leader>l`   | Next buffer     |
+| `<leader>k` | Previous buffer |
 
 ### Code
 
