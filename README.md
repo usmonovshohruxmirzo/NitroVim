@@ -78,8 +78,8 @@
 | `<C-j>`   | Window down     |
 | `<C-k>`   | Window up       |
 | `<C-l>`   | Window right    |
-| `<Tab>`   | Next buffer     |
-| `<S-Tab>` | Previous buffer |
+| `<leader>l`   | Next buffer     |
+| `<leader>k` | Previous buffer |
 
 ### Code
 
