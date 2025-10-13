@@ -14,7 +14,8 @@ require("mason-lspconfig").setup({
     "jsonls",
     "pyright",
     "omnisharp",
-    "lua_ls"
+    "lua_ls",
+    "rust_analyzer"
   },
   automatic_installation = true,
 })
@@ -32,6 +33,31 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
   end,
 })
+
+
+local rt_ok, rust_tools = pcall(require, "rust-tools")
+if rt_ok then
+  rust_tools.setup({
+    server = {
+      on_attach = function(_, bufnr)
+        local opts = { noremap = true, silent = true, buffer = bufnr }
+        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+        vim.keymap.set("n", "<leader>rr", rust_tools.runnables.runnables, opts)
+        vim.keymap.set("n", "<leader>rd", rust_tools.debuggables.debuggables, opts)
+      end,
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = { allFeatures = true },
+          checkOnSave = { command = "clippy" },
+        }
+      }
+    }
+  })
+end
+
+vim.keymap.set("n", "<leader>rr", rust_tools.runnables.runnables, opts)
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local cmp_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")

@@ -308,6 +308,8 @@ require("lazy").setup({
         auto_session_suppress_dirs = { "~/" },
       })
     end,
-  }
+  },
+
+  { "simrat39/rust-tools.nvim" },
 
 })
