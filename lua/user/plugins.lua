@@ -284,11 +284,17 @@ require("lazy").setup({
     event = "VimEnter",
     config = function()
       require("project_nvim").setup({
-        detection_methods = { "pattern", "lsp" },
-        patterns = { ".git", "package.json", "Makefile", "pyproject.toml" },
-        silent_chdir = false,
-        manual_mode = true,
+        manual_mode = false,
+        detection_methods = { "lsp", "pattern" },
+        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "pyproject.toml" },
+        ignore_lsp = {},
+        exclude_dirs = {},
+        show_hidden = false,
+        silent_chdir = true,
+        scope_chdir = 'global',
+        datapath = vim.fn.stdpath("data"),
       })
+
       require("telescope").load_extension("projects")
     end,
   },
