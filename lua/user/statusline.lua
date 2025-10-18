@@ -35,7 +35,12 @@ require('lualine').setup {
     lualine_y = { 'progress' },
     lualine_z = {
       'location',
-      { function() return os.date('%H:%M') end }
+      {
+        function()
+          local clock_icon = " "
+          return clock_icon .. " " .. os.date('%H:%M')
+        end
+      }
     }
   },
   inactive_sections = {
