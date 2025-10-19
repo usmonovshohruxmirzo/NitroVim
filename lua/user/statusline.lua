@@ -52,7 +52,7 @@ require('lualine').setup {
       'location',
       {
         function()
-          local clock_icon = " "
+          local clock_icon = ""
           return clock_icon .. " " .. os.date('%H:%M')
         end
       }
