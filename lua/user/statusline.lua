@@ -1,3 +1,6 @@
+---@diagnostic disable: undefined-global
+---@type table
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -23,7 +26,19 @@ require('lualine').setup {
         always_visible = true,
       }
     },
-    lualine_c = { { 'filename', file_status = true, path = 1 } },
+    lualine_c = {
+      {
+        'filename',
+        file_status = true,
+        path = 1,
+        fmt = function(name)
+          if vim.bo.buftype == 'terminal' then
+            return 'Terminal'
+          end
+          return name
+        end,
+      },
+    },
     lualine_x = {
       'filesize',
       'encoding',
