@@ -318,4 +318,12 @@ require("lazy").setup({
 
   { "simrat39/rust-tools.nvim" },
 
+  -- NeoScroll
+  {
+    "karb94/neoscroll.nvim",
+    config = function()
+      require("neoscroll").setup()
+    end
+  }
+
 })
