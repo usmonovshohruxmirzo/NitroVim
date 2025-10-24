@@ -351,6 +351,54 @@ require("lazy").setup({
     config = function()
       require("neoscroll").setup()
     end
+  },
+
+  -- Neotest
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "Issafalcon/neotest-dotnet",
+      "nvim-neotest/nvim-nio",
+      "haydenmeade/neotest-jest",
+    },
+    config = function()
+      local neotest = require("neotest")
+
+      neotest.setup({
+        adapters = {
+          require("neotest-dotnet")({
+            dap = { justMyCode = false },
+          }),
+
+          require("neotest-jest")({
+            jestCommand = "npm run test --",
+            jestConfigFile = "jest.config.js",
+            env = { CI = true },
+            cwd = function()
+              return vim.fn.getcwd()
+            end,
+          }),
+        },
+
+        diagnostic = {
+          enabled = true,
+        },
+        summary = {
+          open = "botright vsplit | vertical resize 40",
+        },
+        output = {
+          open_on_run = "short",
+        },
+      })
+
+      vim.keymap.set("n", "<leader>tn", function() neotest.run.run() end, { desc = "Run nearest test" })
+      vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end, { desc = "Run all tests in file" })
+      vim.keymap.set("n", "<leader>ts", function() neotest.summary.toggle() end, { desc = "Toggle summary" })
+      vim.keymap.set("n", "<leader>to", function() neotest.output.open({ enter = true }) end, { desc = "Open test output" })
+    end,
   }
 
 })
