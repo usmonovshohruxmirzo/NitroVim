@@ -309,9 +309,6 @@ ls.add_snippets("python", {
 
 -- C#
 ls.add_snippets("cs", {
-  -- Console.WriteLine
-  s("cwr", fmt([[Console.WriteLine({});]], { i(1, "\"text\"") })),
-
   -- Class
   s("class", fmt([[
     public class {}
