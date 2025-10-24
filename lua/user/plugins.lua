@@ -64,15 +64,29 @@ require("lazy").setup({
     "akinsho/toggleterm.nvim",
     version = "*",
     config = function()
-      require("toggleterm").setup({
+      local ok, toggleterm = pcall(require, "toggleterm")
+      if not ok then
+        vim.notify("ToggleTerm not found!", vim.log.levels.WARN)
+        return
+      end
+
+      toggleterm.setup({
         size = 20,
         open_mapping = [[<c-\>]],
-        shade_terminals = true,
+        hide_numbers = true,
+        shade_terminals = false,
+        shading_factor = 2,
+        start_in_insert = true,
+        insert_mappings = true,
+        persist_size = true,
         direction = "float",
+        close_on_exit = true,
+        shell = vim.o.shell,
         float_opts = {
           border = "curved",
           width = math.floor(vim.o.columns * 0.9),
           height = math.floor(vim.o.lines * 0.9),
+          winblend = 5,
         },
       })
 
@@ -81,13 +95,26 @@ require("lazy").setup({
         cmd = "lazygit",
         hidden = true,
         direction = "float",
+        float_opts = {
+          border = "curved",
+          width = math.floor(vim.o.columns * 0.9),
+          height = math.floor(vim.o.lines * 0.9),
+        },
+        on_open = function(term)
+          vim.cmd("startinsert!")
+          vim.keymap.set("n", "q", "<cmd>close<CR>", { buffer = term.bufnr, silent = true })
+        end,
+        on_close = function()
+          vim.cmd("startinsert!")
+        end,
       })
 
-      function _lazygit_toggle()
+      function _LAZYGIT_TOGGLE()
         lazygit:toggle()
       end
 
-      vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<leader>lg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>",
+        { noremap = true, silent = true, desc = "Toggle LazyGit" })
     end,
   },
 
