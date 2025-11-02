@@ -311,7 +311,7 @@ require("lazy").setup({
     event = "VimEnter",
     config = function()
       require("project_nvim").setup({
-        manual_mode = false,
+        manual_mode = true,
         detection_methods = { "lsp", "pattern" },
         patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "pyproject.toml" },
         ignore_lsp = {},
@@ -395,10 +395,33 @@ require("lazy").setup({
       })
 
       vim.keymap.set("n", "<leader>tn", function() neotest.run.run() end, { desc = "Run nearest test" })
-      vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end, { desc = "Run all tests in file" })
+      vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end,
+        { desc = "Run all tests in file" })
       vim.keymap.set("n", "<leader>ts", function() neotest.summary.toggle() end, { desc = "Toggle summary" })
-      vim.keymap.set("n", "<leader>to", function() neotest.output.open({ enter = true }) end, { desc = "Open test output" })
+      vim.keymap.set("n", "<leader>to", function() neotest.output.open({ enter = true }) end,
+        { desc = "Open test output" })
     end,
-  }
+  },
 
+  -- Text Case
+  {
+    "johmsalas/text-case.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("textcase").setup({})
+      require("telescope").load_extension("textcase")
+    end,
+    keys = {
+      "ga",
+      { "ga.", "<cmd>TextCaseOpenTelescope<CR>", mode = { "n", "x" }, desc = "Telescope" },
+    },
+    cmd = {
+      "Subs",
+      "TextCaseOpenTelescope",
+      "TextCaseOpenTelescopeQuickChange",
+      "TextCaseOpenTelescopeLSPChange",
+      "TextCaseStartReplacingCommand",
+    },
+    lazy = false,
+  }
 })
