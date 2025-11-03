@@ -156,7 +156,7 @@ pacman -S lazygit
 **Manual Installation**:
 Download the latest release from [Lazygit Releases](https://github.com/jesseduffield/lazygit/releases)
 
-### Windows
+### Windows (Powershell)
 
 ```powershell
 # Install Neovim
@@ -165,7 +165,7 @@ winget install Neovim.Neovim
 choco install neovim
 
 # Clone NitroVim
-git clone https://github.com/usmonovshohruxmirzo/nitrovim $env:LOCALAPPDATA\nvim
+git clone https://github.com/usmonovshohruxmirzo/nitrovim "$env:LOCALAPPDATA\nvim"
 ```
 
 ### Linux/macOS
