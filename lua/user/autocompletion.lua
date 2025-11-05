@@ -1,4 +1,5 @@
 ---@diagnostic disable: undefined-global
+---@diagnostic disable: different-requires
 ---@type table
 
 local function has_plugin(name)
