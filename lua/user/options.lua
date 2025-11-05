@@ -22,7 +22,6 @@ vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
 -- Performance
-vim.opt.lazyredraw = true
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
 
