@@ -26,6 +26,21 @@
   </a>
 </p>
 
+## 💡 Problem & Solution
+
+**Problem:**
+There are many excellent Neovim distributions available, but most require extensive configuration to get a smooth, modern development experience. This setup process can be time-consuming and frustrating, especially for newcomers.
+
+**Solution:**
+**NitroVim** comes pre-configured with:
+
+* Fast startup with lazy-loaded plugins
+* Modern UI with 20+ themes and transparency support
+* Built-in LSP, fuzzy finder, git integration, and more
+* Smart defaults for keybindings and code navigation
+
+With NitroVim, you get a **ready-to-use, blazing-fast Neovim setup** without spending hours configuring plugins and settings. Just install, and start coding.
+
 ## 📚 Table of Contents
 
 - [Features](#-features)
