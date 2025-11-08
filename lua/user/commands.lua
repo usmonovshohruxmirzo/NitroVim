@@ -18,3 +18,15 @@ vim.api.nvim_create_user_command(
   end,
   { nargs = 1 }
 )
+
+vim.api.nvim_create_user_command("DeleteAllBuffers", function()
+  local current_buf = vim.api.nvim_get_current_buf()
+
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.api.nvim_buf_is_loaded(buf) and buf ~= current_buf then
+      vim.api.nvim_buf_delete(buf, { force = true })
+    end
+  end
+
+  vim.notify("All buffers except the current one have been deleted", vim.log.levels.INFO)
+end, { nargs = 0 })
