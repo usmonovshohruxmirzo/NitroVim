@@ -193,7 +193,7 @@ vim.api.nvim_create_autocmd("QuitPre", {
   end,
 })
 
-vim.api.nvim_create_user_command("FileExplorer", function()
+vim.api.nvim_create_user_command("FileExplorer", function(opts)
   local arg = opts.args:lower()
 
   if arg == "left" or arg == "right" or arg == "center" then
