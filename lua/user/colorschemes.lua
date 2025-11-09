@@ -8,6 +8,15 @@ local onedark = {
   { name = "onedark", variant = "warm" },
 }
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "onedark",
+  callback = function()
+    vim.api.nvim_set_hl(0, "@tag", { fg = "#569CD6" })
+    vim.api.nvim_set_hl(0, "@tag.attribute", { fg = "#D19A66" })
+    vim.api.nvim_set_hl(0, "@tag.delimiter", { fg = "#ABB2BF" })
+  end,
+})
+
 -- Monokai
 local monokai = {
   { name = "monokai", variant = "soda" },
