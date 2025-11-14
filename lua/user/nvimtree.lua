@@ -142,7 +142,7 @@ nvim_tree.setup({
         },
       },
     },
-    remove_file = { close_window = true },
+    remove_file = { close_window = false },
   },
 
   trash = { cmd = "trash", require_confirm = true },
@@ -287,7 +287,7 @@ vim.api.nvim_create_user_command("FileExplorer", function(opts)
             },
           },
         },
-        remove_file = { close_window = true },
+        remove_file = { close_window = false },
       },
 
       trash = { cmd = "trash", require_confirm = true },
@@ -384,7 +384,7 @@ vim.api.nvim_create_user_command("FileExplorer", function(opts)
             },
           },
         },
-        remove_file = { close_window = true },
+        remove_file = { close_window = false },
       },
 
       trash = { cmd = "trash", require_confirm = true },
@@ -495,7 +495,7 @@ vim.api.nvim_create_user_command("FileExplorer", function(opts)
             },
           },
         },
-        remove_file = { close_window = true },
+        remove_file = { close_window = false },
       },
 
       trash = { cmd = "trash", require_confirm = true },
