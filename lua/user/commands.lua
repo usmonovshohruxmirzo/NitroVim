@@ -1,5 +1,5 @@
 ---@diagnostic disable: undefined-global
----@type table
+---@diagnostic disable: unused-local
 
 vim.api.nvim_create_user_command(
   "MkDir",
@@ -30,3 +30,27 @@ vim.api.nvim_create_user_command("DeleteAllBuffers", function()
 
   vim.notify("All buffers except the current one have been deleted", vim.log.levels.INFO)
 end, { nargs = 0 })
+
+local Terminal = require("toggleterm.terminal").Terminal
+vim.api.nvim_create_user_command('VTerm', function(opts)
+  local n = tonumber(opts.args)
+  if not n or n < 1 then
+    print("Number of terminals must be >= 1")
+    return
+  end
+
+  local max_terminals = 4
+  if n > max_terminals then
+    print("Maximum terminals is " .. max_terminals)
+    return
+  end
+
+  for i = 1, n do
+    local term = Terminal:new({
+      direction = "horizontal",
+      size = 15,
+      close_on_exit = false,
+    })
+    term:toggle()
+  end
+end, { nargs = 1 })
