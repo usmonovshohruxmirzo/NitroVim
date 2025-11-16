@@ -19,7 +19,7 @@ vim.api.nvim_create_user_command(
   { nargs = 1 }
 )
 
-vim.api.nvim_create_user_command("DeleteAllBuffers", function()
+vim.api.nvim_create_user_command("CloseAllBuffers", function()
   local current_buf = vim.api.nvim_get_current_buf()
 
   for _, buf in ipairs(vim.api.nvim_list_bufs()) do
