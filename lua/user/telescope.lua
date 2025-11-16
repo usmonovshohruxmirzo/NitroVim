@@ -1,14 +1,22 @@
 ---@diagnostic disable: undefined-global
 ---@type table
 
-require('telescope').setup{
+require("telescope").setup {
   defaults = {
     file_ignore_patterns = {
       "node_modules",
       ".git",
       ".next",
       "bin",
-      "obj"
+      "obj",
+      "dist",
+      "build",
+      "vendor",
+      "*.lock",
+      "__pycache__",
+      ".venv",
+      ".idea",
+      ".vscode"
     },
   },
 }
