@@ -1,5 +1,5 @@
 --- @diagnostic disable: undefined-global
---- @type table
+---@diagnostic disable: redefined-local
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
