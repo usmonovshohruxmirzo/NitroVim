@@ -409,6 +409,75 @@ ls.add_snippets("python", {
 
 	-- Return statement
 	s("ret", fmt("return {}", { i(1, "") })),
+
+  -- String fields
+  s("char", fmt("models.CharField(max_length={}, {})", { i(1, "255"), i(2, "blank=True, null=True") })),
+  s("text", fmt("models.TextField({})", { i(1, "blank=True, null=True") })),
+  s("slug", fmt("models.SlugField(unique={}, max_length={})", { i(1, "True"), i(2, "100") })),
+  s("email", fmt("models.EmailField(unique={}, {})", { i(1, "True"), i(2, "blank=True, null=True") })),
+  s("url", fmt("models.URLField(max_length={}, {})", { i(1, "200"), i(2, "blank=True, null=True") })),
+
+  -- Numeric fields
+  s("int", fmt("models.IntegerField({})", { i(1, "default=0") })),
+  s("bigint", fmt("models.BigIntegerField({})", { i(1, "default=0") })),
+  s("smallint", fmt("models.SmallIntegerField({})", { i(1, "default=0") })),
+  s("posint", fmt("models.PositiveIntegerField({})", { i(1, "default=0") })),
+  s("possmallint", fmt("models.PositiveSmallIntegerField({})", { i(1, "default=0") })),
+  s("float", fmt("models.FloatField({})", { i(1, "default=0.0") })),
+  s("dec", fmt("models.DecimalField(max_digits={}, decimal_places={}, {})", {
+    i(1, "10"),
+    i(2, "2"),
+    i(3, "default=0.0")
+  })),
+
+  -- Boolean field
+  s("bool", fmt("models.BooleanField(default={})", { i(1, "False") })),
+
+  -- Date / time
+  s("date", fmt("models.DateField({}, {})", { i(1, "auto_now_add=False"), i(2, "auto_now=False") })),
+  s("datetime", fmt("models.DateTimeField({}, {})", { i(1, "auto_now_add=True"), i(2, "auto_now=False") })),
+  s("time", fmt("models.TimeField({}, {})", { i(1, "auto_now_add=False"), i(2, "auto_now=False") })),
+  s("duration", fmt("models.DurationField({})", { i(1, "default=timedelta()") })),
+
+  -- File / media
+  s("file", fmt("models.FileField(upload_to='{}', {})", { i(1, "uploads/"), i(2, "blank=True, null=True") })),
+  s("img", fmt("models.ImageField(upload_to='{}', {})", { i(1, "images/"), i(2, "blank=True, null=True") })),
+
+  -- Relationships
+  s("fk", fmt("models.ForeignKey('{}', on_delete=models.{}, related_name='{}')", {
+    i(1, "RelatedModel"),
+    i(2, "CASCADE"),
+    i(3, "related_name")
+  })),
+  s("oto", fmt("models.OneToOneField('{}', on_delete=models.{})", { i(1, "RelatedModel"), i(2, "CASCADE") })),
+  s("m2m", fmt("models.ManyToManyField('{}', related_name='{}')", { i(1, "RelatedModel"), i(2, "related_name") })),
+
+  -- Special / Misc fields
+  s("json", fmt("models.JSONField({}, {})", { i(1, "default=dict"), i(2, "blank=True, null=True") })),
+  s("uuid", fmt("models.UUIDField(default=uuid.uuid4, unique={}, editable={})", { i(1, "True"), i(2, "False") })),
+  s("ip", fmt("models.GenericIPAddressField(protocol='{}', unpack_ipv4={})", { i(1, "both"), i(2, "False") })),
+  s("bin", fmt("models.BinaryField({})", { i(1, "editable=True") })),
+
+  -- Auto / System fields
+  s("autoid", t("models.AutoField(primary_key=True)")),
+  s("bigaid", t("models.BigAutoField(primary_key=True)")),
+  s("smallaid", t("models.SmallAutoField(primary_key=True)")),
+
+  -- Choices example
+  s("choices", fmt([[
+
+    {} = [
+        ('{}', '{}'),
+        ('{}', '{}'),
+    ]
+
+    {} = models.CharField(max_length={}, choices={})
+  ]], {
+    i(1, "CHOICE_OPTIONS"),
+    i(2, "A"), i(3, "Option A"),
+    i(4, "B"), i(5, "Option B"),
+    i(6, "field_name"), i(7, "20"), rep(1)
+  })),
 })
 
 -- C#
