@@ -204,11 +204,19 @@ require("lazy").setup({
         changedelete = { text = "▎" },
         untracked = { text = "▎" },
       },
+      current_line_blame = true,
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = "eol",
+        delay = 500,
+        ignore_whitespace = false,
+      },
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
         local function map(mode, lhs, rhs, desc)
           vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
         end
+
         map("n", "]h", function() gs.nav_hunk("next") end, "Next Hunk")
         map("n", "[h", function() gs.nav_hunk("prev") end, "Prev Hunk")
       end,
@@ -264,18 +272,6 @@ require("lazy").setup({
   { "OrangeT/vim-csharp" },
   { "hrsh7th/vim-vsnip" },
   { "Hoffs/omnisharp-extended-lsp.nvim" },
-
-  -- Git Blame
-  {
-    "f-person/git-blame.nvim",
-    event = "VeryLazy",
-    opts = {
-      enabled = true,
-      message_template = " <summary> • <date> • <author> • <<sha>>",
-      date_format = "%m-%d-%Y %H:%M:%S",
-      virtual_text_column = 1,
-    },
-  },
 
   -- Draw ASCII diagrams
   {
