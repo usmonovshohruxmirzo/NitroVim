@@ -226,7 +226,7 @@ Built-in support for:
 
 ### Adding Plugins
 
-Edit `lua/user/plugins.lua`:
+Edit `lua/nitro/plugins/plugins.lua`:
 
 ```lua
 require("lazy").setup({
@@ -237,7 +237,7 @@ require("lazy").setup({
 
 ### Changing Settings
 
-Edit `lua/user/options.lua`:
+Edit `lua/nitro/core/options.lua`:
 
 ```lua
 vim.opt.option_name = value
@@ -245,7 +245,7 @@ vim.opt.option_name = value
 
 ### Custom Keymaps
 
-Edit `lua/user/keymaps.lua`:
+Edit `lua/nitro/core/keymaps.lua`:
 
 ```lua
 vim.keymap.set('mode', 'key', 'action')
