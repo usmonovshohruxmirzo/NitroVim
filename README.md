@@ -24,6 +24,10 @@
   <a href="https://github.com/usmonovshohruxmirzo/nitrovim/releases">
     <img src="https://img.shields.io/github/v/tag/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=yellow" alt="Latest Tag" />
   </a>
+  <a href="https://github.com/usmonovshohruxmirzo/nitrovim">
+    <img src="https://img.shields.io/github/repo-size/usmonovshohruxmirzo/nitrovim?style=for-the-badge&color=red" alt="Repo Size" />
+  </a>
+
 </p>
 
 ## 💡 Problem & Solution
