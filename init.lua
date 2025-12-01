@@ -6,7 +6,6 @@ require("nitro.plugins.plugins")
 
 require("nitro.core.commands")
 require("nitro.core.cmp")
-require("nitro.core.autocompletion")
 require("nitro.core.autosave")
 require("nitro.core.telescope")
 require("nitro.core.treesitter")
@@ -19,6 +18,7 @@ require("nitro.ui.statusline")
 require("nitro.ui.nvimtree")
 
 require("nitro.lsp.lsp")
+require("nitro.lsp.autocompletion")
 
 require("nitro.snippets.snippets")
 require("nitro.snippets.custom.custom_snippets")
