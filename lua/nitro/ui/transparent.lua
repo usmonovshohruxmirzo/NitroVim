@@ -52,7 +52,8 @@ require("transparent").setup({
     "Pmenu", "PmenuSbar",
   },
   exclude_groups = {
-    "lualine_a_normal", "lualine_a_insert", "lualine_a_visual", "lualine_a_replace", "lualine_a_command", "lualine_a_terminal"
+    "lualine_a_normal", "lualine_a_insert", "lualine_a_visual", "lualine_a_replace", "lualine_a_command",
+    "lualine_a_terminal"
   },
   on_clear = function() end,
 })
@@ -109,7 +110,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     vim.defer_fn(function()
       local state = load_state()
-      if state == nil then return end
+
+      if state == nil then
+        state = false
+      end
 
       if state then
         pcall(vim.cmd, "TransparentEnable")
