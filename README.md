@@ -194,7 +194,6 @@ git clone https://github.com/usmonovshohruxmirzo/nitrovim "$env:LOCALAPPDATA\nvi
 ### Linux/macOS
 
 ```bash
-# Clone configuration
 git clone https://github.com/usmonovshohruxmirzo/nitrovim ~/.config/nvim
 ```
 
