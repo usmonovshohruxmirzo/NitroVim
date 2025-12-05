@@ -174,13 +174,20 @@ Download the latest release from [Lazygit Releases](https://github.com/jesseduff
 
 ### Windows (Powershell)
 
+#### Install Neovim
 ```powershell
-# Install Neovim
 winget install Neovim.Neovim
-# OR with Chocolatey
-choco install neovim
+```
 
-# Clone NitroVim
+#### OR with Chocolatey
+
+```powershell
+choco install neovim
+```
+
+#### Clone NitroVim
+
+```powershell
 git clone https://github.com/usmonovshohruxmirzo/nitrovim "$env:LOCALAPPDATA\nvim"
 ```
 
