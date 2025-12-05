@@ -319,6 +319,6 @@ vim.keymap.set('mode', 'key', 'action')
 
 ## 📜 License
 
-[MIT](./LICENSE) © [Shohruxmirzo Usmonov](https://github.com/usmonovshohruxmirzo)
+[MIT](./LICENSE) © [NitroVim](https://github.com/NitroVim)
 
 <p align="center">Made with ❤️ by the <a href="https://github.com/NitroBrain">NitroBrain</a> team</p>
