@@ -8,7 +8,7 @@ require("luasnip.loaders.from_vscode").lazy_load()
 ls.filetype_extend("scss", { "css" })
 ls.filetype_extend("sass", { "css" })
 ls.filetype_extend("javascript", { "html", "css" })
-ls.filetype_extend("python", { "django", "html" })
+ls.filetype_extend("python", { "django" })
 
 vim.keymap.set({ "i" }, "<C-k>", function()
 	if ls.expand_or_jumpable() then
