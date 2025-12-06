@@ -174,20 +174,26 @@ Download the latest release from [Lazygit Releases](https://github.com/jesseduff
 
 ### Windows (Powershell)
 
+#### Install Neovim
 ```powershell
-# Install Neovim
 winget install Neovim.Neovim
-# OR with Chocolatey
-choco install neovim
+```
 
-# Clone NitroVim
+#### OR with Chocolatey
+
+```powershell
+choco install neovim
+```
+
+#### Clone NitroVim
+
+```powershell
 git clone https://github.com/usmonovshohruxmirzo/nitrovim "$env:LOCALAPPDATA\nvim"
 ```
 
 ### Linux/macOS
 
 ```bash
-# Clone configuration
 git clone https://github.com/usmonovshohruxmirzo/nitrovim ~/.config/nvim
 ```
 
@@ -319,6 +325,6 @@ vim.keymap.set('mode', 'key', 'action')
 
 ## 📜 License
 
-[MIT](./LICENSE) © [Shohruxmirzo Usmonov](https://github.com/usmonovshohruxmirzo)
+[MIT](./LICENSE) © [NitroVim](https://github.com/NitroVim)
 
 <p align="center">Made with ❤️ by the <a href="https://github.com/NitroBrain">NitroBrain</a> team</p>
