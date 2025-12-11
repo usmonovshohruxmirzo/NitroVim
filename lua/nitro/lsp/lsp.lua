@@ -203,3 +203,9 @@ if rt_ok then
     end,
   })
 end
+
+start_lsp("r_language_server", { "r" }, {
+  cmd = { "R", "--slave", "-e", "languageserver::run()" },
+  filetypes = { "r", "rmd" },
+  settings = {},
+})
