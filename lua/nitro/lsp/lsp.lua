@@ -10,7 +10,7 @@ end
 local servers = {
   "ts_ls", "eslint", "html", "cssls", "jsonls",
   "tailwindcss", "emmet_ls", "pyright", "lua_ls",
-  "omnisharp", "rust_analyzer", "r"
+  "rust_analyzer", "r"
 }
 
 for _, name in ipairs(servers) do
