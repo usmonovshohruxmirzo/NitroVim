@@ -1,43 +1,43 @@
 ---@diagnostic disable: undefined-global
----@diagnostic disable: deprecated
 
-_G.capabilities = vim.lsp.protocol.make_client_capabilities()
-local ok_cmp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
-if ok_cmp then
-  _G.capabilities = cmp_lsp.default_capabilities(_G.capabilities)
-end
-
-local servers = {
-  "ts_ls", "eslint", "html", "cssls", "jsonls",
-  "tailwindcss", "emmet_ls", "pyright", "lua_ls",
-  "rust_analyzer", "r"
-}
-
-for _, name in ipairs(servers) do
-  local config = require("nitro.lsp.servers." .. name)
-  config.capabilities = capabilities
-  vim.lsp.config(name, config)
-  vim.lsp.enable(name)
-end
+require("nitro.lsp.mason")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local bufnr = args.buf
-    local buf = vim.lsp.buf
     local opts = { noremap = true, silent = true, buffer = bufnr }
 
-    vim.keymap.set("n", "gd", buf.definition, opts)
-    vim.keymap.set("n", "K", buf.hover, opts)
-    vim.keymap.set("n", "gi", buf.implementation, opts)
-    vim.keymap.set("n", "<leader>rn", buf.rename, opts)
-    vim.keymap.set("n", "<leader>ca", buf.code_action, opts)
-    vim.keymap.set("n", "gr", buf.references, opts)
-
-    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev({ wrap = false }) end, opts)
-    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next({ wrap = false }) end, opts)
-    vim.keymap.set("n", "<leader>dl", function() vim.diagnostic.open_float() end, opts)
-    vim.keymap.set("n", "<leader>f", function() buf.format({ async = true }) end, opts)
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
   end,
+})
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local cmp_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if cmp_ok then
+  capabilities = cmp_lsp.default_capabilities(capabilities)
+end
+
+vim.lsp.config('*', {
+  capabilities = capabilities,
+})
+
+vim.lsp.enable({
+  "lua_ls",
+  "ts_ls",
+  "eslint",
+  "html",
+  "cssls",
+  "tailwindcss",
+  "emmet_language_server",
+  "jsonls",
+  "pyright",
+  "omnisharp",
+  "rust_analyzer",
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
