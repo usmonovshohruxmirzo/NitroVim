@@ -309,13 +309,22 @@ require("lazy").setup({
     config = function()
       require("project_nvim").setup({
         manual_mode = true,
-        detection_methods = { "lsp", "pattern" },
-        patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "pyproject.toml" },
+        detection_methods = { "pattern" },
+        patterns = {
+          ".git",
+          "_darcs",
+          ".hg",
+          ".bzr",
+          ".svn",
+          "Makefile",
+          "package.json",
+          "pyproject.toml",
+        },
         ignore_lsp = {},
         exclude_dirs = {},
         show_hidden = false,
         silent_chdir = true,
-        scope_chdir = 'global',
+        scope_chdir = "global",
         datapath = vim.fn.stdpath("data"),
       })
 
