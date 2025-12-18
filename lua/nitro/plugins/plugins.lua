@@ -272,6 +272,7 @@ require("lazy").setup({
   -- C#
   { "OrangeT/vim-csharp" },
   { "hrsh7th/vim-vsnip" },
+  { "OmniSharp/omnisharp-vim" },
 
   -- Draw ASCII diagrams
   {
