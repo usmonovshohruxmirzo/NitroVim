@@ -314,5 +314,3 @@ vim.keymap.set('mode', 'key', 'action')
 - Startup Time: ~50ms
 - Memory Usage: ~100MB
 - Lazy-loaded plugins: 80%
-
-<p align="center">Made with ❤️ by the <a href="https://github.com/NitroBrain">NitroBrain</a> team</p>
