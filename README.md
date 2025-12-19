@@ -315,8 +315,4 @@ vim.keymap.set('mode', 'key', 'action')
 - Memory Usage: ~100MB
 - Lazy-loaded plugins: 80%
 
-## 📜 License
-
-[MIT](./LICENSE) © [NitroVim](https://github.com/NitroVim)
-
 <p align="center">Made with ❤️ by the <a href="https://github.com/NitroBrain">NitroBrain</a> team</p>
