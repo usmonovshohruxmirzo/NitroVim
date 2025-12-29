@@ -9,6 +9,8 @@ ls.filetype_extend("scss", { "css" })
 ls.filetype_extend("sass", { "css" })
 ls.filetype_extend("javascript", { "html", "css" })
 ls.filetype_extend("python", { "django" })
+ls.filetype_extend("c", { "cpp" })
+ls.filetype_extend("cpp", { "c" })
 
 vim.keymap.set({ "i" }, "<C-k>", function()
 	if ls.expand_or_jumpable() then

@@ -13,6 +13,7 @@ require("mason-lspconfig").setup({
     "pyright",
     "omnisharp",
     "rust_analyzer",
+    "clangd"
   },
   automatic_installation = true,
 })

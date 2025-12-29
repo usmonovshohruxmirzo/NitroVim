@@ -38,6 +38,7 @@ vim.lsp.enable({
   "pyright",
   "omnisharp",
   "rust_analyzer",
+  "clangd",
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {

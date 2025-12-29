@@ -1,5 +1,7 @@
 require("nvim-treesitter").setup({
   ensure_installed = {
+    "c",
+    "cpp",
     "javascript",
     "typescript",
     "tsx",
