@@ -221,6 +221,8 @@ Built-in support for:
 - JavaScript/TypeScript
 - Python
 - C#/.NET
+- C/C++
+- Rust
 - HTML/CSS
 - React/Next.js
 - Lua
