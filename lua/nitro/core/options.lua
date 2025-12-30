@@ -45,11 +45,25 @@ vim.api.nvim_create_autocmd("FileChangedShell", {
   end,
 })
 
+local signs = {
+  Error = " ",
+  Warn  = " ",
+  Hint  = " ",
+  Info  = " ",
+}
+
+if vim.diagnostic.define_sign then
+  for type, icon in pairs(signs) do
+    vim.diagnostic.define_sign(type, { text = icon, texthl = "DiagnosticSign" .. type, numhl = "" })
+  end
+else
+  for type, icon in pairs(signs) do
+    vim.fn.sign_define("DiagnosticSign" .. type, { text = icon, texthl = "DiagnosticSign" .. type, numhl = "" })
+  end
+end
+
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-    spacing = 2,
-  },
+  virtual_text = { prefix = "●", spacing = 2 },
   signs = true,
   underline = true,
   update_in_insert = false,
