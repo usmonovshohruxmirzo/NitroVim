@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 require("notify").setup({
   background_colour = "#000000",
 })

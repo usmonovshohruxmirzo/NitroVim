@@ -1,6 +1,3 @@
----@diagnostic disable: undefined-global
----@diagnostic disable: unused-local
-
 vim.api.nvim_create_user_command(
   "MkDir",
   function(opts)

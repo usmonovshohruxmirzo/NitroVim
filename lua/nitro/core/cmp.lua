@@ -1,6 +1,3 @@
----@diagnostic disable: undefined-global
----@type table
-
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 

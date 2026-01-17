@@ -1,6 +1,3 @@
----@diagnostic disable: undefined-global
----@type table
-
 -- OneDark
 local onedark = {
   { name = "onedark", variant = "darker" },

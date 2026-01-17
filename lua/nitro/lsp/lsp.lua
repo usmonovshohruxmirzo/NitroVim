@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 require("nitro.lsp.mason")
 
 vim.api.nvim_create_autocmd("LspAttach", {

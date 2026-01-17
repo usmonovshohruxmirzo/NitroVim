@@ -1,6 +1,3 @@
----@diagnostic disable: undefined-global
----@type table
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
