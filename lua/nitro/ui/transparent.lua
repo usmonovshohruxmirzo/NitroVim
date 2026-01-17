@@ -47,6 +47,16 @@ require("transparent").setup({
 
     "TermNormal", "TermNormalNC",
     "Pmenu", "PmenuSbar",
+
+    "WinBar",
+    "WinBarNC",
+    "DropBarCurrentContext",
+    "DropBarContext",
+    "DropBarIconUISeparator",
+    "DropBarIconUIIndicator",
+    "DropBarMenuNormal",
+    "DropBarMenuHoverEntry",
+    "DropBarMenuCurrentContext",
   },
   exclude_groups = {
     "lualine_a_normal", "lualine_a_insert", "lualine_a_visual", "lualine_a_replace", "lualine_a_command",
