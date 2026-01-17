@@ -1,6 +1,7 @@
 require("nitro.core.options")
 require("nitro.core.keymaps")
 require("nitro.core.filetypes")
+require("nitro.core.diagnostics")
 
 require("nitro.plugins.plugins")
 
