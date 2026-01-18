@@ -1,81 +1,36 @@
--- OneDark
-local onedark = {
+local themes = {
   { name = "onedark", variant = "darker" },
   { name = "onedark", variant = "cool" },
   { name = "onedark", variant = "warm" },
-}
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "onedark",
-  callback = function()
-    vim.api.nvim_set_hl(0, "@tag", { fg = "#569CD6" })
-    vim.api.nvim_set_hl(0, "@tag.attribute", { fg = "#D19A66" })
-    vim.api.nvim_set_hl(0, "@tag.delimiter", { fg = "#ABB2BF" })
-  end,
-})
-
--- Monokai
-local monokai = {
   { name = "monokai", variant = "soda" },
   { name = "monokai", variant = "pro" },
   { name = "monokai", variant = "ristretto" },
-}
 
--- Tokyonight
-local tokyonight = {
   { name = "tokyonight", variant = "night" },
   { name = "tokyonight", variant = "storm" },
   { name = "tokyonight", variant = "day" },
   { name = "tokyonight", variant = "moon" },
-}
 
--- Gruvbox
-local gruvbox = {
   { name = "gruvbox", variant = "dark" },
   { name = "gruvbox", variant = "light" },
-}
 
--- Catppuccin
-local catppuccin = {
   { name = "catppuccin", variant = "latte" },
   { name = "catppuccin", variant = "frappe" },
   { name = "catppuccin", variant = "macchiato" },
   { name = "catppuccin", variant = "mocha" },
-}
 
--- Dracula
-local dracula = {
   { name = "dracula", variant = "default" },
-}
-
--- Nord
-local nord = {
   { name = "nord", variant = "default" },
-}
 
--- Everforest
-local everforest = {
   { name = "everforest", variant = "soft" },
   { name = "everforest", variant = "medium" },
   { name = "everforest", variant = "hard" },
-}
 
--- Rose Pine
-local rosepine = {
   { name = "rose-pine", variant = "main" },
   { name = "rose-pine", variant = "moon" },
   { name = "rose-pine", variant = "dawn" },
 }
-
-local themes = {}
-for _, list in ipairs({
-  onedark, monokai, tokyonight, gruvbox,
-  catppuccin, dracula, nord, everforest, rosepine
-}) do
-  for _, theme in ipairs(list) do
-    table.insert(themes, theme)
-  end
-end
 
 local theme_save_path = vim.fn.stdpath("config") .. "/theme.json"
 
@@ -106,14 +61,12 @@ local function apply_theme(theme, save)
   if theme.name == "onedark" then
     require("onedark").setup({ style = theme.variant, transparent = transparent })
   elseif theme.name == "monokai" then
-    require("monokai").setup({
-      transparent_background = transparent,
-      palette = require("monokai")[theme.variant]
-    })
+    vim.g.monokai_style = theme.variant
+    require("monokai").setup({ transparent_background = transparent })
   elseif theme.name == "tokyonight" then
     require("tokyonight").setup({ style = theme.variant, transparent = transparent })
   elseif theme.name == "gruvbox" then
-    require("gruvbox").setup({ transparent_mode = transparent })
+    require("gruvbox").setup({ contrast = theme.variant, transparent_mode = transparent })
   elseif theme.name == "catppuccin" then
     require("catppuccin").setup({ flavour = theme.variant, transparent_background = transparent })
   elseif theme.name == "dracula" then
@@ -122,7 +75,7 @@ local function apply_theme(theme, save)
     vim.g.nord_disable_background = transparent
   elseif theme.name == "everforest" then
     vim.g.everforest_background = theme.variant
-    vim.g.everforest_transparent_background = 1
+    vim.g.everforest_transparent_background = transparent and 1 or 0
   elseif theme.name == "rose-pine" then
     require("rose-pine").setup({ variant = theme.variant, disable_background = transparent })
   end
