@@ -11,7 +11,6 @@ require("mason-lspconfig").setup({
     "emmet_language_server",
     "jsonls",
     "pyright",
-    "omnisharp",
     "rust_analyzer",
     "clangd"
   },
