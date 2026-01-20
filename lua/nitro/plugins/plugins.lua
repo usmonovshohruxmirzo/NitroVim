@@ -116,11 +116,21 @@ require("lazy").setup({
   },
 
   -- LSP + Mason
-  {
-    "mason-org/mason.nvim",
+ {
     "mason-org/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "b0o/schemastore.nvim",
+  },
+  {
+    "mason-org/mason.nvim",
+    config = function()
+      require('mason').setup({
+        registries = {
+          'github:Crashdummyy/mason-registry',
+          'github:mason-org/mason-registry',
+        },
+      })
+    end
   },
 
   -- Completion (nvim-cmp)
@@ -268,7 +278,10 @@ require("lazy").setup({
   -- C#
   { "OrangeT/vim-csharp" },
   { "hrsh7th/vim-vsnip" },
-  { "OmniSharp/omnisharp-vim" },
+  {
+    "seblyng/roslyn.nvim",
+    opts = {},
+  },
 
   -- Draw ASCII diagrams
   {
