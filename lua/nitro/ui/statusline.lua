@@ -10,7 +10,14 @@ require('lualine').setup {
     refresh = { statusline = 1000, tabline = 100, winbar = 100 },
   },
   sections = {
-    lualine_a = { 'mode' },
+    lualine_a = {
+      {
+        'mode',
+        fmt = function(str)
+          return '󱐋 ' .. str
+        end,
+      },
+    },
     lualine_b = {
       'branch',
       'diff',
